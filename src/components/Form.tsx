@@ -32,7 +32,13 @@ export default function Form({dispatch}: FormProps) {
 
   const handleSubmit = (e : FormEvent<HTMLFormElement>) =>{
     e.preventDefault();
-    dispatch({ type: "save-activity", payload:{newActivity:activity} })
+    dispatch({ type: "save-activity", payload:{newActivity:activity} });
+
+    setActivity({
+      category:1,
+      name:'',
+      calories:0
+    });
   }
   return (
     <div>
